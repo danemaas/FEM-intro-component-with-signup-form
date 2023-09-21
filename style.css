@@ -1,0 +1,133 @@
+/*====== GOOGLE FONTS ======*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*====== VARIABLES ======*/
+:root {
+    --mobile: 375px;
+    --desktop: 1440px;
+
+    /* Primary */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+
+    /* Accent */
+    --blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+/*====== BASE ======*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(images/bg-intro-mobile.png);
+    background-color: var(--red);
+    font-size: 16px;
+}
+
+/*====== MAIN CLASSES ======*/
+.container {
+    padding-block: 5rem;
+    width: var(--mobile);
+}
+
+.info-text {
+    color: white;
+    padding-bottom: 2rem;
+}
+
+.price-box {
+    background-color: var(--blue);
+    padding-block: 1rem;
+    padding-inline: 4rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.185) 0px 9px 3px 0px;
+    cursor: pointer;
+    color: white;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 13px;
+    padding-left: 15px;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+}
+
+.input-box::placeholder {
+    font-weight: 500;
+}
+
+.button {
+    width: 100%;
+    padding: 13px;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    box-shadow: hsla(154, 71%, 29%, 0.747) 0px 3px 3px 0px;
+    margin-bottom: 1rem;
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: hsla(154, 59%, 51%, 0.685);
+}
+
+.terms {
+    font-size: 11px;
+    color: hsl(246, 25%, 77%);
+    padding-inline: 3rem;
+}
+
+.terms a {
+    color: var(--red);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.error-icon {
+    position: absolute;
+    top: .85rem;
+    right: 1rem;
+}
+
+.error-msg {
+    font-size: 10px;
+    font-style: italic;
+    color: var(--red);
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: var(--desktop);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+    }
+
+    .info-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
